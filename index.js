@@ -1,14 +1,13 @@
 "use strict";
-const safeInt = Number.MAX_SAFE_INTEGER;
-console.log(safeInt);
-const safeIntPlusOne = safeInt + 1;
-const safeIntPlusTwo = safeInt + 2;
-console.log(safeIntPlusOne);
-console.log(safeIntPlusTwo);
-let bigInt = BigInt(1234);
-let bigInt2 = 123456n;
-console.log(bigInt);
-console.log(bigInt2);
-let c = bigInt - bigInt2;
-let e = 1234.5n;
-let f = Math.log(1234.5);
+let id = Symbol(1234);
+let alphabeticId = Symbol("id");
+let user = {
+    [id]: "123",
+    name: "Mark",
+    getId() {
+        return this[id];
+    },
+};
+// user.id - not accessible
+console.log(user.name);
+console.log(user.getId());
