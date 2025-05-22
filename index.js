@@ -1,13 +1,11 @@
 "use strict";
-let id = Symbol(1234);
-let alphabeticId = Symbol("id");
-let user = {
-    [id]: "123",
-    name: "Mark",
-    getId() {
-        return this[id];
-    },
-};
-// user.id - not accessible
-console.log(user.name);
-console.log(user.getId());
+/**
+ *
+ */
+let message = "Hello, Typescript!";
+let age = 42;
+let isStudent = true;
+let fetched = null;
+let user = undefined;
+let largeNumber = 9007199254740991n;
+let unique = Symbol("uniqueSymbol");

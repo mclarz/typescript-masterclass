@@ -1,15 +1,10 @@
-let id: symbol = Symbol(1234);
-
-let alphabeticId: symbol = Symbol("id");
-
-let user = {
-  [id]: "123",
-  name: "Mark",
-
-  getId() {
-    return this[id];
-  },
-};
-// user.id - not accessible
-console.log(user.name);
-console.log(user.getId());
+/**
+ *
+ */
+let message: string = "Hello, Typescript!";
+let age: number = 42;
+let isStudent: boolean = true;
+let fetched: null = null;
+let user: undefined = undefined;
+let largeNumber: bigint = 9007199254740991n;
+let unique: symbol = Symbol("uniqueSymbol");
