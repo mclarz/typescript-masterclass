@@ -1,6 +1,20 @@
-function addNumbers(a: number, b: number) {
-  return a + b;
-}
+/**
+ * String Types
+ */
+var firstname: string = "John";
+let automobile = "Toyota";
+const city = "New York";
+let student = 32;
+let studentAsString: string = student.toString();
 
-console.log(addNumbers(5, 10)); // Output: 15
-console.log(addNumbers("text", 10));
+/** Number Types */
+var age: number = 25;
+let year: number = 2023;
+const pi = 3.14;
+pi = 3.15;
+let stringToNumber: number = parseInt("1985");
+
+/** Boolean Types */
+let isStudent: boolean = false;
+const alwaysStudent = true;
+let minimumAge: boolean = student > 18 ? true : false;
