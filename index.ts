@@ -1,20 +1,16 @@
-/**
- * String Types
- */
-var firstname: string = "John";
-let automobile = "Toyota";
-const city = "New York";
-let student = 32;
-let studentAsString: string = student.toString();
+let user: undefined;
+// console.log(user);
 
-/** Number Types */
-var age: number = 25;
-let year: number = 2023;
-const pi = 3.14;
-pi = 3.15;
-let stringToNumber: number = parseInt("1985");
+let userRole: null;
+userRole = null;
+// console.log(userRole);
 
-/** Boolean Types */
-let isStudent: boolean = false;
-const alwaysStudent = true;
-let minimumAge: boolean = student > 18 ? true : false;
+console.log(user === userRole);
+
+if (!userRole) {
+  console.log("this condition is true");
+}
+
+if (!user) {
+  console.log("this condition is also true");
+}
