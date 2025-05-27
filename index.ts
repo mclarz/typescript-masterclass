@@ -16,9 +16,9 @@ type CheckScore = typeof score extends never ? {} : []; // array
  * Check if below lines of code are valid as per TypeScript or not without uncommenting them
  *  */
 
-// age = 85; // not valid
-// score.push(10); // true
-// score.push("New Score"); // false should be a number
-// let customAge: CustomAge = 50; // false should be 79
-// let primitive: Primitive = new Date(); // false should string or number or boolean
-// let years: CheckScore = []; // true it has type of array
+age = 85; // not valid
+score.push(10); // true
+score.push("New Score"); // false should be a number
+let customAge: CustomAge = 50; // false should be 79
+let primitive: Primitive = new Date(); // false should string or number or boolean
+let years: CheckScore = []; // true it has type of array
