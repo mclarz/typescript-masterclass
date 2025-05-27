@@ -16,10 +16,10 @@ function multplyByTwo(number: unknown) {
  * Bigint
  * RegExp
  * Function
-  * Map
-  * Set
-  * Array
-  * Object
+ * Map
+ * Set
+ * Array
+ * Object
  *
  */
 
@@ -35,10 +35,8 @@ let age: CustomNumber = 20;
 let today: CustomDate = new Date();
 let unique: CustomSymbol = Symbol();
 
-
-function addNumbers(a:number, b:number) {
+function addNumbers(a: number, b: number) {
   return a + b;
 }
 // inference - judges or infers the type
 let finalResult = addNumbers(2, 3);
-
