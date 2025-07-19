@@ -1,21 +1,11 @@
-let person = {
-  name: "Mark",
-  age: 30,
+type Post = {
+  title: string;
+  content: string;
+  date: Date;
 };
 
-let car: Object = {
-  make: "Toyota",
-  model: "Camry",
-  year: 2020,
+let post: Post = {
+  title: "This is post title",
+  content: "This is content of the post",
+  date: new Date(),
 };
-
-car = [];
-car = () => {};
-
-let newCar: { make: string; model: string; year: number } = {
-  make: "Toyota",
-  model: "Camry",
-  year: 2020,
-};
-
-newCar = [];
