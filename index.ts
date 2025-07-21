@@ -1,29 +1,38 @@
-type Dog = {
-  name: string;
-  barks: boolean;
-  wags: boolean;
+type NetworkLoadingState = {
+  state: "loading";
 };
 
-type Cat = {
-  name: string;
-  purrs: boolean;
+type NetworkFailedState = {
+  state: "failed";
+  code: number;
 };
 
-type DogAndCat = Dog | Cat;
-
-let dog: DogAndCat = {
-  name: "buddy",
-  barks: true,
-  wags: true,
+type NetworkSuccessState = {
+  state: "success";
+  response: {
+    title: string;
+    duration: number;
+    summary: string;
+  };
 };
 
-let cat: DogAndCat = {
-  name: "kitty",
-  purrs: true,
-};
+type NetworkState =
+  | NetworkLoadingState
+  | NetworkFailedState
+  | NetworkSuccessState;
 
-let hybridAnimal: DogAndCat = {
-  name: "buddy",
-  purrs: true,
-  barks: true,
-};
+function logger(state: NetworkState) {
+  switch (state.state) {
+    case "loading":
+      console.log("Loading...");
+      break;
+    case "failed":
+      console.error(`Failed with code: ${state.code}`);
+      break;
+    case "success":
+      console.log(
+        `Success! Title: ${state.response.title}, Duration: ${state.response.duration}, Summary: ${state.response.summary}`
+      );
+      break;
+  }
+}
