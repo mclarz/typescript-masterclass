@@ -1,71 +1,29 @@
-type Author = {
+type Dog = {
   name: string;
-  age: number;
-  email: string;
-  readonly type: "human" | "ai";
+  barks: boolean;
+  wags: boolean;
 };
 
-type Awards = {
-  [key: string]: AwardDetails;
-};
-
-type AwardDetails = {
+type Cat = {
   name: string;
-  date: Date;
+  purrs: boolean;
 };
 
-type Post = {
-  title: string;
-  content: string;
-  date: Date;
-  author: Author;
-  awards: Awards;
-  category?: string;
+type DogAndCat = Dog | Cat;
+
+let dog: DogAndCat = {
+  name: "buddy",
+  barks: true,
+  wags: true,
 };
 
-let post: Post = {
-  title: "This is post title",
-  content: "This is content of the post",
-  date: new Date(),
-  author: {
-    name: "John",
-    age: 30,
-    email: "john@doe.com",
-    type: "human",
-  },
-  awards: {
-    web: {
-      name: "Web Developer of the Year",
-      date: new Date(),
-    },
-    web3: {
-      name: "Web3 Innovator",
-      date: new Date(),
-    },
-  },
+let cat: DogAndCat = {
+  name: "kitty",
+  purrs: true,
 };
 
-let post2: Post = {
-  title: "This is post title",
-  content: "This is content of the post",
-  date: new Date(),
-  author: {
-    name: "John",
-    age: 30,
-    email: "john@doe.com",
-    type: "ai",
-  },
-  awards: {
-    web: {
-      name: "Web Developer of the Year",
-      date: new Date(),
-    },
-    web3: {
-      name: "Web3 Innovator",
-      date: new Date(),
-    },
-  },
-  category: "Technology",
+let hybridAnimal: DogAndCat = {
+  name: "buddy",
+  purrs: true,
+  barks: true,
 };
-
-post.author.type = "ai";
